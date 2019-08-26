@@ -1,4 +1,7 @@
 let footer = document.querySelector('footer');
+let count = 0;
+
 footer.addEventListener("click", function () {
-	console.log('clique');
+	count++;
+	console.log(`Clic numéro ${count}`);
 })
