@@ -24,3 +24,10 @@ btnMenu.addEventListener("click", function () {
 	}
 	// menu.classList.toggle('collapse');
 });
+
+let btnEdit = document.querySelector(".btn.btn-sm.btn-outline-secondary");
+let card_text = btnEdit.parentNode.parentNode.previousElementSibling;
+
+btnEdit.addEventListener("click", function () {
+	card_text.style.color = 'red';
+});
