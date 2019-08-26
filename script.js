@@ -138,6 +138,11 @@ let mouse = logo.addEventListener("mouseenter", function () {
 				body.classList.add('offset-md-8');
 				console.log('test');
 				break;
+
+				case 66:
+			body.removeAttribute('class');
+				console.log('test');
+				break;
 		}
 
 	})
