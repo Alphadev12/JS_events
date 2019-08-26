@@ -40,7 +40,6 @@ let card_text2 = document.querySelectorAll('.card-text')[1];
 btnEdit2.addEventListener("click", function () {
 	if (card_text2.style.color === 'green') {
 		card_text2.style.color = 'black';
-		isGreen = true;
 	}
 	else {
 		card_text2.style.color = 'green';
@@ -55,11 +54,30 @@ navbar.addEventListener("dblclick", function () {
 	if (linkDisabled == false) {
 		linkTag.disabled = true;
 		linkDisabled = true;
-		console.log('knl');
 	}
 	else if(linkDisabled == true){
 		linkTag.disabled = false;
 		linkDisabled = false;
-		console.log('knl');
 	}
 });
+
+// Fonctionnalité 6
+let btnView = document.querySelectorAll('.btn.btn-sm.btn-success');
+for (let i = 0; i < btnView.length; i++) {
+	let card_image = btnView[i].parentNode.parentNode.parentNode.previousElementSibling;
+	let cart_textView = btnView[i].parentNode.parentNode.previousElementSibling;
+	let toggle = true;
+
+	btnView[i].addEventListener("mousemove", function () {
+		if (toggle == true) {
+			cart_textView.style.display = 'none';
+			card_image.style.width = '20%';
+			toggle = false;
+		}
+		else if (toggle == false) {
+			cart_textView.style.display = 'block';
+			card_image.style.width = '100%';
+			toggle = true;
+		}
+	});
+}
