@@ -46,3 +46,20 @@ btnEdit2.addEventListener("click", function () {
 		card_text2.style.color = 'green';
 	}
 });
+
+// Fonctionnalité 5
+let navbar = document.querySelector('.navbar');
+let linkTag = document.getElementsByTagName('link')[0];
+let linkDisabled = false;
+navbar.addEventListener("dblclick", function () {
+	if (linkDisabled == false) {
+		linkTag.disabled = true;
+		linkDisabled = true;
+		console.log('knl');
+	}
+	else if(linkDisabled == true){
+		linkTag.disabled = false;
+		linkDisabled = false;
+		console.log('knl');
+	}
+});
