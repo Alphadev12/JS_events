@@ -110,6 +110,36 @@ btnPrev.addEventListener("click", function (event) {
 	parent.insertBefore(firstCard, lastCard.nextSibling);
 
 	// lastCard.nextSibling() = firstCard;
+});
 
-	console.log(firstCard);
+// Fonctionnalité 9
+let logo = document.getElementsByTagName('strong')[0];
+let body = document.querySelector('body');
+
+let mouse = logo.addEventListener("mouseenter", function () {
+	document.addEventListener("keydown", function (event) {
+		key = event.keyCode;
+		console.log(key);
+		switch (key) {
+			case 65:
+			body.removeAttribute('class');
+				body.classList.add('col-4');
+				break;
+			case 89:
+			body.removeAttribute('class');
+				body.classList.add('col-4');
+				body.classList.add('offset-md-4');
+				console.log('test');
+				break;
+
+			case 80:
+			body.removeAttribute('class');
+				body.classList.add('col-4');
+				body.classList.add('offset-md-8');
+				console.log('test');
+				break;
+		}
+
+	})
+	console.log('mouse');
 });
