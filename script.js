@@ -95,3 +95,21 @@ btnNext.addEventListener("click", function () {
 
 	parent.insertBefore(lastCard,firstCard);
 });
+
+// Fonctionnalité 8
+let btnPrev = document.getElementsByClassName('btn btn-primary my-2')[0];
+
+btnPrev.addEventListener("click", function (event) {
+	event.preventDefault();
+	let card = document.getElementsByClassName("card");
+	firstCard = card[0].parentNode;
+	lastCard = card[5].parentNode;
+
+	parent = lastCard.parentNode;
+
+	parent.insertBefore(firstCard, lastCard.nextSibling);
+
+	// lastCard.nextSibling() = firstCard;
+
+	console.log(firstCard);
+});
