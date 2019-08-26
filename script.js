@@ -68,7 +68,7 @@ for (let i = 0; i < btnView.length; i++) {
 	let cart_textView = btnView[i].parentNode.parentNode.previousElementSibling;
 	let toggle = true;
 
-	btnView[i].addEventListener("mousemove", function () {
+	btnView[i].addEventListener("mouseover", function () {
 		if (toggle == true) {
 			cart_textView.style.display = 'none';
 			card_image.style.width = '20%';
@@ -81,3 +81,17 @@ for (let i = 0; i < btnView.length; i++) {
 		}
 	});
 }
+
+
+// Fonctionnalité 7
+let btnNext = document.getElementsByClassName('btn btn-secondary my-2')[0];
+
+btnNext.addEventListener("click", function () {
+	let card = document.getElementsByClassName("card");
+	lastCard = card[5].parentNode;
+	firstCard = card[0].parentNode;
+
+	parent = lastCard.parentNode;
+
+	parent.insertBefore(lastCard,firstCard);
+});
