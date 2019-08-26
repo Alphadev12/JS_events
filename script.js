@@ -25,9 +25,24 @@ btnMenu.addEventListener("click", function () {
 	// menu.classList.toggle('collapse');
 });
 
+// Fonctionnalité 3
 let btnEdit = document.querySelector(".btn.btn-sm.btn-outline-secondary");
 let card_text = btnEdit.parentNode.parentNode.previousElementSibling;
 
 btnEdit.addEventListener("click", function () {
 	card_text.style.color = 'red';
+});
+
+// Fonctionnalité 4
+let btnEdit2 = document.querySelectorAll(".btn.btn-sm.btn-outline-secondary")[1];
+let card_text2 = document.querySelectorAll('.card-text')[1];
+
+btnEdit2.addEventListener("click", function () {
+	if (card_text2.style.color === 'green') {
+		card_text2.style.color = 'black';
+		isGreen = true;
+	}
+	else {
+		card_text2.style.color = 'green';
+	}
 });
